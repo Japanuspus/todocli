@@ -4,12 +4,20 @@ version = "0.1.0"
 authors = ["janus@insignificancegalore.net"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
 
 [dependencies]
 confy = "0.4.0"
 serde = {version = "1.0", features = ["derive"]}
+reqwest = { version = "0.10", features = ["blocking", "json"] }
 
 [build-dependencies.config_struct]
 version = "~0.3.0"
 features = ["toml-parsing"]
+
