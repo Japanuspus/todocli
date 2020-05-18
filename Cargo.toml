@@ -16,6 +16,8 @@ codegen-units = 1
 confy = "0.4.0"
 serde = {version = "1.0", features = ["derive"]}
 reqwest = { version = "0.10", features = ["blocking", "json"] }
+# thiserror = "1.0"
+anyhow = "1.0"
 
 [build-dependencies.config_struct]
 version = "~0.3.0"
